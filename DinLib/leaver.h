@@ -1,13 +1,13 @@
 #pragma once
 #include <iostream>
 
-#ifdef LIBRARYDYNAMIC_EXPORTS
-#define LIBRARY_API __declspec(dllexport)
+#ifdef DINLIB_EXPORTS
+#define DINLIB __declspec(dllexport)
 #else
-#define LIBRARY_API __declspec(dllimport)
+#define DINLIB __declspec(dllimport)
 #endif
 
 class Leaver {
 public:
-	LIBRARY_API void leave(std::string str);
+	DINLIB void leave(std::string str);
 };
